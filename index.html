@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Test Page</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq uery.min.js"></script>
+</head>
+<body>
+    <p>JavaScript</p>
+    <button id="button1">Click Me! button 1</button>
+    <button onclick="clickButton2()">Click Me button 2</button>
+
+    <h2>Calulator</h2>
+    <input id="FirstNumber" type="text" placeholder="First Number">
+    <input id="SecondNumber" type="text" placeholder="Second Number">
+    <button onclick="Add()">+</button>
+    <button onclick="Sub()">-</button>
+    <button onclick="Mul()">*</button>
+    <button onclick="Div()">/</button>
+
+    <h2>Jquery</h2>
+    
+
+
+    <script>
+        //Calling the function from the document model 
+        document.getElementById("button1").onclick = function(){
+            alert("You clicked button 1");
+        };
+
+        //Calling the function with the on click method
+        function clickButton2(){
+            alert("You clicked button 2");
+        }
+
+        function Add(){
+            var firstNumber = document.getElementById('FirstNumber').value;
+            var secondNumber = document.getElementById('SecondNumber').value;
+            var total;
+
+            total = parseInt(firstNumber) + parseInt(secondNumber);
+            alert(total);
+        }
+
+        function Sub(){
+            var firstNumber = document.getElementById('FirstNumber').value;
+            var secondNumber = document.getElementById('SecondNumber').value;
+            var total;
+
+            total = parseInt(firstNumber) - parseInt(secondNumber);
+            alert(total);
+        }
+
+        function Mul(){
+            var firstNumber = document.getElementById('FirstNumber').value;
+            var secondNumber = document.getElementById('SecondNumber').value;
+            var total;
+
+            total = parseInt(firstNumber) * parseInt(secondNumber);
+            alert(total);
+        }
+
+        function Div(){
+            var firstNumber = document.getElementById('FirstNumber').value;
+            var secondNumber = document.getElementById('SecondNumber').value;
+            var total;
+
+            total = parseInt(firstNumber) / parseInt(secondNumber);
+            alert(total);
+        }
+
+
+    </script>
+</body>
+</html>
